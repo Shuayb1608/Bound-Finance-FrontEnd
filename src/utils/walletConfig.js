@@ -5,7 +5,7 @@ import { goerli } from 'wagmi/chains'
 
 
 const chains = [ goerli ]
-export const projectId = '7392393195e7d432a8c841b79f3c2616';
+export const projectId = process.env.REACT_APP_PROJECT_ID;
 
 const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
 export const wagmiConfig = createConfig({
